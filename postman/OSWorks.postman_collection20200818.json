@@ -1,0 +1,28 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OSWorks",
+		"_postman_id": "0cd73864-519d-c0e4-5db4-ad4d27b0f6a7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"request": {
+				"url": "localhost:8080/clientes",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

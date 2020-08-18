@@ -1,0 +1,67 @@
+API - appplication programm interface
+
+REST - REpresentation State Transfer
+- padrão arquitetural
+- separação entre cliente e servidor, escalabilidade, independência de linguagem e mercado
+
+Constraints
+- cliente <-> servidor
+- stateless
+- cache
+- interface uniforme
+- sistema em camadas
+- código sob demanda
+
+Protocolo
+- requisição -> resposta
+
+- composição da requisição
+	- método
+	- URI
+	- versão
+	- cabeçalhos
+	- corpo/payload
+
+- composição da resposta
+	- versão
+	- status
+	- cabeçalhos
+	- corpo
+
+Recursos REST
+- qualquer coisa exposta na web
+- recurso -> pode ser um objeto/classe collection resource
+- URI (Uniform Resource Identifier)-> string que da endereço para o recurso de forma nao ambigua
+
+Spring REST
+- simplifica termo para REST API
+
+Spring
+- canivete suiço, simplicidade, maturidade, modularidade, evolução constante, open source, comunidade grande e forte
+- popularidade e empregabilidade
+
+pom.xml -> POM (Project Object Model)
+
+empacotar -> run as - mavem build - goals clean package
+rodar app -> java -jar nome_arquivo.jar
+
+idempotente -> requisições seguintes não gera um efeito colateral
+
+códigos HTTP
+2xx - Sucesso
+3xx - Redirecionamento
+4xx - Erro no cliente
+5xx - Erro no servidor
+
+hotdeploy
+direito no projeto -> Spring -> add dev tools
+
+content negociation (outro tipo de retorno)
+- no header colocar: Accept: application/xml
+- da erro -> 406 not acceptable
+- adicionar dependencia -> direito no projeto -> Spring -> edit starters (nao tem o jackson)
+- adicionar dependencia no pom.xml
+<dependency>
+	<groupId>com.fasterxml.jackson.dataformat</groupId>
+	<artifactId>jackson-dataformat-xml</artifactId>
+</dependency>
