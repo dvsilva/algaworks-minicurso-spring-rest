@@ -1,0 +1,17 @@
+spring data jpa e mysql
+direito no projeto -> Spring -> edit starters -> add spring jpa e driver mysql
+
+configurar conexão no arquibo application.properties
+
+adicionar flyway
+direito no projeto -> Spring -> edit starters -> add flyway migration
+
+criar basta db/migration dentro de resources
+criar arquivo V001__cria-tabela-cliente.sql
+
+fazer validação jakarta bean validation
+spring-boot-starter-web ja adicionado no projeto com jakarta-validation e hibernate-validation
+mapear classe de dominio com @NotBlank, @Email e @Size e no método do controller colocar @Valid
+
+configurar padrão UTF-8 para arquivos properties
+preferentes -> general -> content types -> text -> java properties files -> UTF-8 -> clicar em UPDATE
