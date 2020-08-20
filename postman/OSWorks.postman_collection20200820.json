@@ -1,0 +1,248 @@
+{
+	"variables": [],
+	"info": {
+		"name": "OSWorks",
+		"_postman_id": "0cd73864-519d-c0e4-5db4-ad4d27b0f6a7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"description": "",
+			"item": [
+				{
+					"name": "XML - Clientes - Listar",
+					"request": {
+						"url": "localhost:8080/clientes",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Clientes - Listar",
+					"request": {
+						"url": "localhost:8080/clientes",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes - Buscar",
+					"request": {
+						"url": "localhost:8080/clientes/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes - Adicionar",
+					"request": {
+						"url": "localhost:8080/clientes",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Fernando\",\n    \"email\": \"fernando@algaworks.com\",\n    \"telefone\": \"34 7394-4499\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes - Atualizar",
+					"request": {
+						"url": "localhost:8080/clientes/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"João Moura\",\n    \"email\": \"mourajoao@algaworks.com\",\n    \"telefone\": \"34 9888-4499\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ordens de Serviço",
+			"description": "",
+			"item": [
+				{
+					"name": "Ordens de serviço - Adicionar",
+					"request": {
+						"url": "localhost:8080/ordens-servico",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cliente\": {\n    \t\"id\": 2\n    },\n    \"descricao\": \"Reparo de notebook Dell. Cliente diz que não liga\",\n    \"preco\": 300.50\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Ordens de serviço - Finalizar",
+					"request": {
+						"url": "localhost:8080/ordens-servico/1/finalizacao",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Ordens de serviço - Listar",
+					"request": {
+						"url": "localhost:8080/ordens-servico",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Ordens de serviço - Buscar",
+					"request": {
+						"url": "localhost:8080/ordens-servico/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Comentário - Adicionar",
+					"request": {
+						"url": "localhost:8080/ordens-servico/1/comentarios",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descricao\": \"Placa mãe foi reparada\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Comentário - Listar",
+					"request": {
+						"url": "localhost:8080/ordens-servico/1/comentarios",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
